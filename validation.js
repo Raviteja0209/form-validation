@@ -9,9 +9,6 @@ function validate() {
             showDiv('na')
         };
     }
-    else {
-        alert("please select one option")
-    }
 }
 
 function showDiv(action) {
