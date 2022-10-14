@@ -1,16 +1,35 @@
 function validate() {
     if (document.getElementById('y').checked) {
-        document.getElementById('sub').onclick = function () {
-            location.href = "userdata.html"
+        document.getElementById('y').onclick = function () {
+            showDiv('y')
         };
-        alert("data update successfully")
     }
     else if (document.getElementById('na').checked) {
-        document.getElementById('sub').onclick = function () {
-            location.href = "nonedit.html"
+        document.getElementById('na').onclick = function () {
+            showDiv('na')
         };
     }
-    else { 
-       alert("please select one option")
+    else {
+        alert("please select one option")
+    }
+}
+
+function showDiv(action) {
+    if (action == 'y') {
+        document.getElementById('onclickYes').style.display = "block";
+        hideDiv('na')
+    }
+    else if (action == 'na') {
+        document.getElementById('onclickNA').style.display = "block";
+        hideDiv('y')
+    }
+}
+
+function hideDiv(action) {
+    if (action == 'y') {
+        document.getElementById('onclickYes').style.display = "none";
+    }
+    else if (action == 'na') {
+        document.getElementById('onclickNA').style.display = "none";
     }
 }
